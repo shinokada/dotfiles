@@ -4,8 +4,6 @@ Resource: [USING GIT AND GITHUB TO MANAGE YOUR DOTFILES](http://blog.smalleycrea
 
 I have changed makesymlinks.sh to use .filename.
 
-- Step 1
-
 ```
 $ mv ~/.filename ~/dotfiles/.filename
 
@@ -33,12 +31,4 @@ git push -u origin master
 # from the second time
 git push origin master
 
-
-
-# add to git
-
-
-
-
-
-
+```
