@@ -2,6 +2,8 @@
 
 Resource: [USING GIT AND GITHUB TO MANAGE YOUR DOTFILES](http://blog.smalleycreative.com/tutorials/using-git-and-github-to-manage-your-dotfiles/)
 
+[My dotfiles](https://github.com/shinokada/dotfiles)
+
 I have changed makesymlinks.sh to use .filename.
 
 ```

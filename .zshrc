@@ -78,6 +78,14 @@ alias stop_mysql='sudo /usr/local/mysql/support-files/mysql.server stop'
 ############
 export PATH="/usr/local/git/bin:/usr/local/bin:$PATH"
 
+alias gs='git status '
+alias ga='git add '
+alias gb='git branch '
+alias gc='git commit'
+alias gd='git diff'
+alias go='git checkout '
+alias gk='gitk --all&'
+alias gx='gitx --all'
 
 ###########
 # Selenium
