@@ -86,6 +86,8 @@ alias gd='git diff'
 alias go='git checkout '
 alias gk='gitk --all&'
 alias gx='gitx --all'
+alias gpush='git push origin master'
+
 
 ###########
 # Selenium
