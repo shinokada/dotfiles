@@ -78,16 +78,6 @@ alias stop_mysql='sudo /usr/local/mysql/support-files/mysql.server stop'
 ############
 export PATH="/usr/local/git/bin:/usr/local/bin:$PATH"
 
-alias gs='git status '
-alias ga='git add '
-alias gb='git branch '
-alias gc='git commit'
-alias gd='git diff'
-alias go='git checkout '
-alias gk='gitk --all&'
-alias gx='gitx --all'
-alias gpush='git push origin master'
-
 
 ###########
 # Selenium
@@ -219,12 +209,6 @@ function atlas(){
 # also alias is lodaed from oh-my zsh pluings above plugins=(git)
 ###########
 
-alias cd1="cd .." 
-alias cd2="cd ../.." 
-alias cd3="cd ../../.." 
-alias cd4="cd ../../../.." 
-alias cd5="cd ../../../../.." 
-
 function mkdircd () { mkdir -p "$@" && eval cd "\"\$$#\""; } 
 
 
@@ -280,3 +264,9 @@ export PYTHONPATH=/usr/local/lib/python2.7/site-packages
 [[ -s /etc/profile.d/autojump.zsh ]] && . /etc/profile.d/autojump.zsh
 
 autoload -U compinit && compinit
+
+#######
+# my alias
+########
+alias lless='ls -la | less'
+alias aless='alias | less'
