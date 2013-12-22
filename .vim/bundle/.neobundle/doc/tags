@@ -75,6 +75,7 @@
 :VimShellTab	vimshell.txt	/*:VimShellTab*
 :VimShellTerminal	vimshell.txt	/*:VimShellTerminal*
 :unite-sources-commands	unite.txt	/*:unite-sources-commands*
+<P	unimpaired.txt	/*<P*
 <Plug>(unite_all_exit)	unite.txt	/*<Plug>(unite_all_exit)*
 <Plug>(unite_append_end)	unite.txt	/*<Plug>(unite_append_end)*
 <Plug>(unite_append_enter)	unite.txt	/*<Plug>(unite_append_enter)*
@@ -146,6 +147,11 @@
 <Plug>(vimshell_split_create)	vimshell.txt	/*<Plug>(vimshell_split_create)*
 <Plug>(vimshell_split_switch)	vimshell.txt	/*<Plug>(vimshell_split_switch)*
 <Plug>(vimshell_switch)	vimshell.txt	/*<Plug>(vimshell_switch)*
+<p	unimpaired.txt	/*<p*
+=P	unimpaired.txt	/*=P*
+=p	unimpaired.txt	/*=p*
+>P	unimpaired.txt	/*>P*
+>p	unimpaired.txt	/*>p*
 NERDTree	NERD_tree.txt	/*NERDTree*
 NERDTree-?	NERD_tree.txt	/*NERDTree-?*
 NERDTree-A	NERD_tree.txt	/*NERDTree-A*
@@ -736,6 +742,7 @@ unimpaired	unimpaired.txt	/*unimpaired*
 unimpaired-encoding	unimpaired.txt	/*unimpaired-encoding*
 unimpaired-lines	unimpaired.txt	/*unimpaired-lines*
 unimpaired-next	unimpaired.txt	/*unimpaired-next*
+unimpaired-pasting	unimpaired.txt	/*unimpaired-pasting*
 unimpaired-todo	unimpaired.txt	/*unimpaired-todo*
 unimpaired-toggling	unimpaired.txt	/*unimpaired-toggling*
 unimpaired.txt	unimpaired.txt	/*unimpaired.txt*

@@ -270,3 +270,8 @@ autoload -U compinit && compinit
 ########
 alias lless='ls -la | less'
 alias aless='alias | less'
+# find all files including hidden and directories
+alias fall='find . -print'
+# find all files without hidden nor hidden directories
+alias ffall="find . -not -path '*/\.*'"
+

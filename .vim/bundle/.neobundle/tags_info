@@ -1,5 +1,9 @@
+SWTC.vim
+autoswap_mac
+dragvisuals.vim
 gitv
 lightline.vim
+listtrans.vim
 neobundle.vim
 nerdtree
 open-browser.vim
