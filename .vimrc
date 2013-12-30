@@ -23,10 +23,9 @@ NeoBundle 'Shougo/vimshell'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'suan/vim-instant-markdown'
-NeoBundle 'shinokada/autoswap_mac'
-NeoBundle 'shinokada/listtrans.vim'
-NeoBundle 'shinokada/SWTC.vim'
-NeoBundle 'shinokada/dragvisuals.vim'
+NeoBundle 'tpope/vim-commentary'
+NeoBundle 'beloglazov/vim-online-thesaurus'
+NeoBundle 'vim-scripts/TwitVim'
 
 filetype plugin indent on     " Required!
 
@@ -53,9 +52,14 @@ set shiftwidth=2
 set softtabstop=2
 
 " for UltiSnips
-let g:UltiSnipsSnippetsDir ="/Users/teacher/.vim/bundle/ultisnips-master/UltiSnips"
+let g:UltiSnipsSnippetsDir ="/Users/teacher/.vim/bundle/ultisnips/UltiSnips"
 let g:UltiSnipsEditSplit = "vertical"
-let g:UltiSnipsListSnippets = "<C-tab>"
+let g:UltiSnipsListSnippets = "<c-j>"
+
+" Set ultisnips triggers
+let g:UltiSnipsExpandTrigger="<tab>"                                            
+let g:UltiSnipsJumpForwardTrigger="<tab>"                                       
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"                                    
 
 " NERDTree, Use F3 for toggle NERDTree
 nmap <silent> <F3> :NERDTreeToggle<CR>
@@ -91,7 +95,7 @@ hi CursorLine term=none cterm=none ctermbg=17 guibg=236
 " set hlsearch
 
 " set line numbers
-" set number
+set number
 
 " word wrapping and inserted line breakes only when Enter key is hit
 set wrap
@@ -129,54 +133,27 @@ let g:lightline = {
       \ 'subseparator': { 'left': '', 'right': '' }
       \ }
 
-"==========[ Damian Conway OSCON 2013: More Instantly Better Vim"]============
 
-"====[ Make the 81st column stand out ]====================
+" treat all numerals as decimal not octal 
+set nrformats=
 
-    " just the 81st column of wide lines...
-    highlight ColorColumn ctermbg=magenta
-    call matchadd('ColorColumn', '\%81v', 100)
+" Thesaurus dir
+set thesaurus+=~/.vim/thesaur/mthesaur.txt
+set thesaurus+=~/.vim/thesaur/ruby-functions.txt
 
+" mapping English spelling functionality 
+map <F5> :setlocal spell! spelllang=en_us<CR>
+imap <F5> <C-\><C-o>:setlocal spell! spelllang=en_us<CR>
 
-"====[ Make tabs, trailing whitespace, and non-breaking spaces visible ]======
-
-    exec "set listchars=tab:\uBB\uBB,trail:\uB7,nbsp:~"
-    set list
-
-
-"====[ Swap : and ; to make colon commands easier to type ]======
-
-"    nnoremap  ;  :
-"    nnoremap  :  ;
-
-
-"====[ Always turn on syntax highlighting for diffs ]=========================
-
-    " EITHER select by the file-suffix directly...
-    augroup PatchDiffHighlight
-        autocmd!
-        autocmd BufEnter  *.patch,*.rej,*.diff   syntax enable
-    augroup END
+""" twitvim
+nnoremap ,tp :PosttoTwitter<CR>
+nnoremap ,tf :FriendsTwitter<CR>
+nnoremap ,tu :UserTwitter<CR>
+nnoremap ,tr :RepliesTwitter<CR>
+nnoremap ,tn :NextTwitter<CR>
+autocmd FileType twitvim call s:twitvim_my_settings()
+function! s:twitvim_my_settings()
+  set nowrap
+endfunction
 
 
-
-"====[ autoswap_mac.vim ]============
-
-set title titlestring=
-
-"====[ listtrans.vim ]==========
-
-nmap  ;l   :call ListTrans_toggle_format()<CR>
-vmap  ;l   :call ListTrans_toggle_format('visual')<CR>
-
-"====[ dragvisulas.vim ]=========
-
-" runtime plugin/dragvisuals.vim
-" 
-" vmap  <expr>  h        DVB_Drag('left')
-" vmap  <expr>  l        DVB_Drag('right')
-" vmap  <expr>  j        DVB_Drag('down')
-" vmap  <expr>  k        DVB_Drag('up')
-" 
-" " Remove any introduced trailing whitespace after moving... 
-" let g:DVB_TrimWS = 1
