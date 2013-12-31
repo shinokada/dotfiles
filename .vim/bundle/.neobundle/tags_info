@@ -4,12 +4,17 @@ lightline.vim
 neobundle.vim
 nerdtree
 open-browser.vim
+supertab
 ultisnips
 ultisnips-rspec
 unite.vim
 vim-commentary
+vim-dict
 vim-fugitive
 vim-instant-markdown
+vim-misc
+vim-notes
 vim-online-thesaurus
+vim-surround
 vim-unimpaired
 vimshell

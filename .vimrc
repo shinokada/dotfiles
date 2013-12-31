@@ -26,6 +26,12 @@ NeoBundle 'suan/vim-instant-markdown'
 NeoBundle 'tpope/vim-commentary'
 NeoBundle 'beloglazov/vim-online-thesaurus'
 NeoBundle 'vim-scripts/TwitVim'
+NeoBundle 'xolox/vim-misc'
+NeoBundle 'xolox/vim-notes'
+NeoBundle 'szw/vim-dict'
+NeoBundle 'ervandew/supertab'
+NeoBundle 'tpope/vim-surround'
+
 
 filetype plugin indent on     " Required!
 
@@ -156,4 +162,6 @@ function! s:twitvim_my_settings()
   set nowrap
 endfunction
 
-
+" twitvim
+let twitvim_count = 50
+let twitvim_browser_cmd="browsercmd"
