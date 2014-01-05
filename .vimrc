@@ -32,6 +32,11 @@ NeoBundle 'szw/vim-dict'
 NeoBundle 'ervandew/supertab'
 NeoBundle 'tpope/vim-surround'
 
+NeoBundle 'Shougo/vimproc', {
+      \ 'build' : {
+      \     'mac' : 'make -f make_mac.mak',
+      \    },
+      \ }
 
 filetype plugin indent on     " Required!
 
@@ -77,6 +82,10 @@ set backspace=2
 set mouse=a
 let g:NERDTreeMouseMode=3
 
+" For vim-instant-markdown
+let g:instant_markdown_slow = 1
+"let g:instant_markdown_autostart = 0
+
 " Use esc to noh(nohighlight) the searched words
 " nnoremap <esc> :noh<return><esc> " this creates a problem for down/up/right/left to insert A B C D
 
@@ -90,7 +99,8 @@ filetype indent on
 inoremap # X<BS>#
 
 " colorscheme
-" colorscheme darkblue
+"set background=dark
+"colorscheme solarized
 
 " Adding cursor color 
 set cursorline
@@ -123,7 +133,7 @@ let g:html_number_lines = 0
 " For spell checking 
 set spelllang=en_us
 
-" for itchyne/lightline
+"""""""""" for itchyne/lightline"""""""""
 if !has('gui_running')
   set t_Co=256
 endif
@@ -143,7 +153,7 @@ let g:lightline = {
 " treat all numerals as decimal not octal 
 set nrformats=
 
-" Thesaurus dir
+"""""""""""" Thesaurus dir"""""""""""""
 set thesaurus+=~/.vim/thesaur/mthesaur.txt
 set thesaurus+=~/.vim/thesaur/ruby-functions.txt
 
@@ -151,17 +161,23 @@ set thesaurus+=~/.vim/thesaur/ruby-functions.txt
 map <F5> :setlocal spell! spelllang=en_us<CR>
 imap <F5> <C-\><C-o>:setlocal spell! spelllang=en_us<CR>
 
-""" twitvim
-nnoremap ,tp :PosttoTwitter<CR>
-nnoremap ,tf :FriendsTwitter<CR>
-nnoremap ,tu :UserTwitter<CR>
-nnoremap ,tr :RepliesTwitter<CR>
-nnoremap ,tn :NextTwitter<CR>
+"""""""""""TwitVim"""""""""""""""""""""
+nnoremap ,tp :<C-u>PosttoTwitter<CR>
+nnoremap ,tf :<C-u>FriendsTwitter<CR><C-w>j
+nnoremap ,tu :<C-u>UserTwitter<CR><C-w>j
+nnoremap ,tr :<C-u>RepliesTwitter<CR><C-w>j
+nnoremap ,tn :<C-u>NextTwitter<CR>
 autocmd FileType twitvim call s:twitvim_my_settings()
 function! s:twitvim_my_settings()
   set nowrap
 endfunction
 
-" twitvim
+""""""""""TwitVim"""""""""""""""""""""""""
 let twitvim_count = 50
-let twitvim_browser_cmd="browsercmd"
+let twitvim_browser_cmd="open"
+
+""""""""" Supertab"""""""""""""""""""""""""
+" use tab for autocomplete
+let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
+" lets SuperTab decide which completion mode to use 
+let g:SuperTabDefaultCompletionType = "context"

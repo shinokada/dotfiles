@@ -1,1 +1,0 @@
-/Users/teacher/dotfiles/.vim
