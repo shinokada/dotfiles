@@ -1,8 +1,2 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/Users/teacher/Desktop/rails_projects/sample_app'
-let g:netrw_dirhist_2='/Users/teacher/Documents/command_line_apps_in_ruby_demo'
-let g:netrw_dirhist_3='/Users/teacher/Documents/rubytest'
-let g:netrw_dirhist_4='/Users/teacher/Desktop/rails_projects/sample_app'
-let g:netrw_dirhist_5='/Users/teacher/Documents/rubytest'
-let g:netrw_dirhist_6='/Users/teacher/Desktop/rails_projects/sample_app'
+let g:netrw_dirhist_cnt =0

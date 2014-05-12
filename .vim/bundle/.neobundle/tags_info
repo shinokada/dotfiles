@@ -1,9 +1,12 @@
 TwitVim
+emmet-vim
+gist-vim
 gitv
 lightline.vim
 neobundle.vim
 nerdtree
 open-browser.vim
+sudo.vim
 supertab
 ultisnips
 ultisnips-rspec
@@ -12,10 +15,14 @@ vim-commentary
 vim-dict
 vim-fugitive
 vim-instant-markdown
+vim-markdown
 vim-misc
 vim-notes
 vim-online-thesaurus
+vim-repeat
 vim-surround
 vim-unimpaired
+vimfiler.vim
 vimproc
 vimshell
+webapi-vim

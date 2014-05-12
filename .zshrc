@@ -37,7 +37,7 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/usr/local/bin:/bin:/usr/sbin:/sbin:/usr/bin:/usr/X11/bin:/usr/local/sbin
+export PATH=/usr/local/bin:/bin:/usr/sbin:/sbin:/usr/bin:/usr/X11/bin:/usr/local/sbin:/usr/texbin
 
 ############
 # Ruby rbenv
@@ -274,4 +274,17 @@ alias aless='alias | less'
 alias fall='find . -print'
 # find all files without hidden nor hidden directories
 alias ffall="find . -not -path '*/\.*'"
+
+alias copyrubytemp='cp -R ~/Documents/ruby-templates/ ./'
+
+######
+# 10ms for key sequences where default is 400ms
+# ######
+KEYTIMEOUT=1
+
+########
+# PEAR
+########
+export PATH="/Users/teacher/pear/bin:$PATH"
+
 
